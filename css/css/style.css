@@ -348,7 +348,7 @@ body {
   .card__heading {
     position: absolute;
     top: 13rem;
-    left: 17rem;
+    left: 1rem;
     font-size: 3.1rem;
     color: #fff;
     font-weight: 200;
