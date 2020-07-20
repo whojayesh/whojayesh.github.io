@@ -1,0 +1,94 @@
+@mixin clearfix{
+       &::after{
+              content: ""; //we dont want to see this element for that we have made the content to blank
+              display: table;
+              clear: both;  //it will clear both float that is left and right
+       } 
+}
+/*
+row:: after{}
+*/
+
+@mixin abscenter{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+}
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600PX  -- PHONE
+600 - 900PX -- TABLET PORTRAIT
+900 - 1200 --  TABLET LANDSCAPE
+[1200-1800] -- IS WHERE OUR NORMAL STYLES APPLY
+1800+ : BIG DESKTOP
+*/
+@mixin respond-phone{
+       @media (max-width: 600px)
+       {
+              @content
+       }
+}
+
+/* 
+---phone
+---tablet portrait
+---tab labdscape
+--big desktop
+*/
+
+/*
+Order in which we should start formatting our elements ---
+1. base
+2. typography
+3. general layout
+4. grid
+5. page layout
+6. components.
+*/
+
+
+//1em = 16px;
+@mixin respond($breakpoint){
+       
+       @if $breakpoint == phone
+       {
+              
+              @media (max-width: 37.5em) //600px
+              {
+                  @content
+              }
+              
+       }
+       
+       @if $breakpoint == tab-port
+       {
+              
+              @media (max-width: 56.25em)  //900px
+              {
+                  @content
+              }
+              
+       }
+       
+       @if $breakpoint == tab-land
+       {
+              
+              @media (max-width: 75em) //1200px
+              {
+                  @content
+              }
+              
+       }
+       
+       @if $breakpoint == big-desktop
+       {
+              
+              @media (max-width: 112.5em) //1800px
+              {
+                  @content
+              }
+              
+       }
+}

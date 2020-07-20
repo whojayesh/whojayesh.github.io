@@ -1,0 +1,144 @@
+.card{
+       perspective: 150rem;
+       -moz-perspective: 150rem;
+       position: relative;
+       height: 50rem;
+       //text-align: center;
+       
+       &__side{
+              height: 50rem;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              backface-visibility: hidden;
+              overflow: hidden;
+              transition: all 1s;
+              box-shadow: 0 1rem 4rem rgba($black, .7);
+              
+              &--front{
+                     background-color: $white;
+              }
+              
+              &--back{
+                     transform: rotateY(-180deg);
+                     
+                     &--1{
+                            background-image: linear-gradient(to right bottom, $light_yellow, $dark_yellow); 
+                     }
+                     &--2{
+                            background-image: linear-gradient(to right bottom, $light_green, $dark_green); 
+                     }
+                     &--3{
+                            background-image: linear-gradient(to right bottom, $light_blue, $dark_blue); 
+                     }
+              }
+       }
+       
+       &:hover &__side--front{
+              transform: rotateY(180deg);
+       }
+       
+       &:hover &__side--back{
+              transform: rotateY(0deg);
+       }
+       
+       
+        &__picture{
+                     
+                     background-size: cover;
+                     background-position: top;
+                     height: 23rem;
+                     background-blend-mode: color-burn;
+                     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+                     
+                     &--1{
+                            background-image: linear-gradient(to right bottom, $light_yellow, $dark_yellow), url(../img/nat-5.jpg);
+                     }
+                     &--2{
+                            background-image: linear-gradient(to right, $light_green, $dark_green), url(../img/nat-6.jpg);
+                     }
+                     &--3{
+                            background-image: linear-gradient(to right, $light_blue , $dark_blue), url(../img/nat-7.jpg);
+                     }
+                     
+              }
+       
+       &__heading{
+              position: absolute;
+              top: 13rem;
+              left: 17rem;
+              font-size: 3.1rem;
+              color: $white;
+              font-weight: 200;
+              width: 75%;
+              -webkit-box-decoration-break: clone;
+              
+              
+              
+              &--span{
+                     
+                     &--1{
+                           background-image: linear-gradient(to right, rgba($light_yellow, .8), rgba($dark_yellow, .8)); 
+                     }
+                     &--2{
+                           background-image: linear-gradient(to right, rgba($light_green, .8), rgba($dark_green, .8)); 
+                     }
+                      &--3{
+                           background-image: linear-gradient(to right, rgba($light_blue, .8), rgba($dark_blue, .8)); 
+                     }
+              }
+       }
+       
+       &__details{
+              ul{
+                     width: 75%; 
+                     position: absolute;
+                     top: 26.3rem;
+                     left: 3.2rem;
+                     
+                     @include respond(tab-port)
+                     {
+                          left: 6.2rem;
+                     }       
+                     
+                     
+                     li{
+                                list-style: none;
+                            text-align: center;
+                            font-size: 1.7rem;
+                            //font-weight: 250;
+                            color: $light_grey_3;
+                            
+                            &:not(:last-child){
+                                   margin-bottom: 1.5rem;
+                                   border-bottom: 0.8px solid $light_grey_2;
+                            }
+                     }
+              }
+       }
+       
+       &__cta{
+              
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+       }
+       
+        &__price-box{
+              text-align: center;
+               margin-bottom: 8rem;
+               color: $white
+              }
+              
+       &__price-only{
+             font-size: 1.4rem;
+              text-transform: uppercase;
+       }
+       
+       &__price-value{
+              font-size: 6rem;
+              font-weight: 100;
+       }
+}

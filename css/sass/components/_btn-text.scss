@@ -1,0 +1,28 @@
+.btn-text{
+       display: inline-block;
+       font-size: $font-size;
+       padding-bottom: 0.1rem;
+       color: $dark_green;
+       border-bottom: 1px solid $dark_green;
+       transition: all .4s;
+       //backface-visibility: hidden;
+       
+       &:link,
+       &:visited{
+              text-decoration: none;
+       }
+       
+       &:hover{
+              color: $white;
+              background-color: $dark_green;
+              transform: translateY(-2px);
+              box-shadow: 0 2rem 2rem rgba($black, .15);
+       }
+       
+       &:active{
+              transform: translateY(-0.5px);
+              text-shadow: 0 0.5rem 1rem rgba($black, 0.8);
+       }
+       
+       
+}

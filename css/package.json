@@ -1,0 +1,17 @@
+{
+  "name": "jayesh",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "jayesh bhakat",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^14.5.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

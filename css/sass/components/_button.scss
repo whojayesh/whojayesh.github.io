@@ -1,0 +1,54 @@
+.btn {
+       
+        background-color: $white;
+        color: $dark_green;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+       
+       @include respond(phone){
+              letter-spacing: 0.5rem;
+              font-size: 1rem;
+              font-weight: 700;
+       }
+
+    &,
+    &:link,
+    &:visited {
+        transition: all .2s;
+        
+           //change the custom <button> element
+           border: none;
+           cursor: pointer;
+    }
+
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+       
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+      
+    }
+
+    /*&--white {
+        background-color: #fff;
+        color: #777;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        
+    }*/
+
+}
