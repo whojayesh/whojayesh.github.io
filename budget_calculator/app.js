@@ -190,7 +190,7 @@
                                        <div class="item__value">+ ${obj.value}</div>
                                        <div class="item__delete">
                                            <button class="item__delete--btn">
-                                               <i class="ion-ios-close-outline"></i>
+                                               ✖
                                            </button>
                                        </div>
                                    </div>
@@ -204,7 +204,9 @@
                                        <div class="item__value">- ${obj.value}</div>
                                        <div class="item__percentage">21%</div>
                                        <div class="item__delete">
-                                           <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                           <button class="item__delete--btn">
+                                                 ✖
+                                           </button>
                                        </div>
                                    </div>
                                </div>   `;
@@ -371,7 +373,8 @@
 
        var ctrlDeleteItem = function(event){
 
-              var item = event.target.parentNode.parentNode.parentNode.parentNode.id
+              // e = target will be the text node.
+              var item = event.target.parentNode.parentNode.parentNode.id
               if(item)
               {
                      var array = item.split("-");
