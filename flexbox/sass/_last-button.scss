@@ -1,0 +1,56 @@
+.cta{
+       padding: 3.5rem 0;
+       text-align: center;
+       //background-color: aqua;
+       
+       &__book-now{
+              font-size: 2rem;
+              font-weight: 300;
+              text-transform: uppercase;
+              margin-bottom: 2.5rem;
+       }
+       
+}
+
+.btnn{
+       
+       font-size: 1.5rem;
+       font-weight: 300;
+       text-transform: uppercase;
+       border-radius: 100px;
+       border: none;
+       color: var(--color-primary);
+       position: relative;
+       text-align: center;
+       overflow: hidden;
+       
+       
+       &__visible{
+             display: inline-block;
+             padding: 2rem 8rem;
+              transition: all .2s;
+       }
+       
+       &__invisible{
+              display: inline-block;
+              position: absolute;
+              top: -152%;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              padding: 2rem 0;
+              transition: all .3s;
+       }
+       
+       &:hover &__visible{
+              transform: translateY(4rem);
+       }
+       
+        &:hover &__invisible{
+              top: 0%;
+       }
+       
+       &:focus{
+              outline: none;
+       }
+}

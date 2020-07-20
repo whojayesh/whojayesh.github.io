@@ -1,0 +1,70 @@
+.container{
+       min-width: 130rem;
+       margin: 8rem auto;
+       background-color: var(--grey-light-2);
+       box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+       
+       @media (max-width: $bp-largest)
+       {
+              margin: 0 auto;
+       }
+        @media (max-width: $bp-large)
+       {
+              margin: 0 auto;
+              max-width: 100%;
+              width: 100%;
+       }
+}
+
+.header{
+       height: 7rem;
+       background-color: #fff;
+       border-bottom: var(--grey-dark-2);
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       
+}
+
+.content{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       min-height: 60rem;
+       
+       
+       @media (max-width: $bp-medium)
+       {
+          flex-direction: column;    
+       }
+}
+
+.hotel-view{
+       flex: 1;
+       background-color: var(--grey-light-2);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       //align-items: center;
+       
+}
+
+.detail{
+       
+       display: flex;
+       flex-direction: row;
+       padding: 4.5rem;
+
+       @media (max-width: $bp-medium)
+       {
+              padding: 3rem;
+       }
+       
+       @media (max-width: $bp-small)
+       {
+              flex-direction: column;
+              align-items: center;
+       }
+       
+}
